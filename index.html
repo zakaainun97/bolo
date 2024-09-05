@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <section class="container">
+      <div class="kiri">
+        <div class="slider-container">
+          <div class="main-image">
+            <img id="mainDisplay" src="./public/1a.webp" alt="Main Image" />
+          </div>
+          <div class="thumbnail-container">
+            <div class="thumbnails" id="thumbnails">
+              <img
+                class="thumbnail"
+                src="./public/customer2.png"
+                alt="Thumbnail 1"
+                onclick="changeMainImage(this)"
+              />
+              <img
+                class="thumbnail"
+                src="./public/customer3.png"
+                alt="Thumbnail 2"
+                onclick="changeMainImage(this)"
+              />
+              <img
+                class="thumbnail"
+                src="./public/1d.webp"
+                alt="Thumbnail 3"
+                onclick="changeMainImage(this)"
+              />
+              <img
+                class="thumbnail"
+                src="./public/1e.webp"
+                alt="Thumbnail 4"
+                onclick="changeMainImage(this)"
+              />
+              <img
+                class="thumbnail"
+                src="./public/compair.webp"
+                alt="Thumbnail 5"
+                onclick="changeMainImage(this)"
+              />
+              <img
+                class="thumbnail"
+                src="./public/1a.webp"
+                alt="Thumbnail 1"
+                onclick="changeMainImage(this)"
+              />
+              <img
+                class="thumbnail"
+                src="./public/1b.webp"
+                alt="Thumbnail 2"
+                onclick="changeMainImage(this)"
+              />
+              <img
+                class="thumbnail"
+                src="./public/1d.webp"
+                alt="Thumbnail 3"
+                onclick="changeMainImage(this)"
+              />
+              <img
+                class="thumbnail"
+                src="./public/1e.webp"
+                alt="Thumbnail 4"
+                onclick="changeMainImage(this)"
+              />
+              <img
+                class="thumbnail"
+                src="./public/compair.webp"
+                alt="Thumbnail 5"
+                onclick="changeMainImage(this)"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="kanan">
+        <h1>Hand-Carved Longhorn Skull White Mandala</h1>
+        <figure class="check-mark-container">
+          <img
+            src="./public/noun-checkmark.png"
+            alt="check mark"
+            class="check-mark"
+          />
+          <figcaption>
+            <p>
+              <b><i>In Stock</i></b>
+            </p>
+          </figcaption>
+        </figure>
+        <div class="price"><p>$12</p></div>
+        <div class="btn-container">
+          <div class="quantity-container">
+            <div class="btn-color">
+              <button type="button" class="qty-btn minus" onclick="decrement()">
+                -
+              </button>
+              <input
+                type="number"
+                id="quantity"
+                name="quantity"
+                value="1"
+                min="1"
+              />
+              <button type="button" class="qty-btn plus" onclick="increment()">
+                +
+              </button>
+            </div>
+          </div>
+        </div>
+        <button class="btn-2">Add to Bag</button>
+        <div class="compair-container">
+          <h3>Save Up to 40%! Bundle & Save More</h3>
+          <div class="compair">
+            <!-- coba<div class="img-compair"><img src="./public/compair.webp" alt="" /></div> -->
+            <div class="product-section">
+              <div class="product" id="product1-container">
+                <a href="#" class="image-price">
+                  <img
+                    src="./public/1a.webp"
+                    alt="Product 1 Image"
+                    class="product-image"
+                  />
+                  <label for="product1" class="product-name">Product 1</label>
+                  <!-- Disembunyikan -->
+                  <span class="price" id="price1">$17</span>
+                </a>
+              </div>
+              <!-- Icon Plus -->
+              <div id="plus-icon">+</div>
+              <div class="product" id="product2-container">
+                <a href="#" class="image-price">
+                  <img
+                    src="./public/1b.webp"
+                    alt="Product 2 Image"
+                    class="product-image"
+                  />
+                  <label for="product1" class="product-name">Gajah duduk</label>
+                  <!-- Disembunyikan -->
+                  <span class="price" id="price2">$16</span>
+                </a>
+              </div>
+            </div>
+            <div class="selected-products">
+              <!-- <h3>Selected Products:</h3> -->
+              <button class="btn-3">Add Selected to Cart</button>
+              <ul id="selected-products-list">
+                <li>
+                  <input type="checkbox" id="selected-product1" />
+                  <label for="selected-product1"
+                    >Product 1: <strong>$50</strong></label
+                  >
+                </li>
+                <li>
+                  <input type="checkbox" id="selected-product2" />
+                  <label for="selected-product2"
+                    >Product 2: <strong>$70</strong></label
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="deskripsi">
+          <p>
+            This concentrated clarifying formulation removes product/hard water
+            buildup, increases circulation for hair growth, reduces oil
+            production, helps control dandruff, and detoxifies your scalp. When
+            used before any chemical service, KeraRX Detoxifying Shampoo ensures
+            the unifor
+          </p>
+        </div>
+        <div>
+          <div class="slider">
+            <div class="slide active" onclick="showContent(1)">
+              <h5>Ingredients list</h5>
+            </div>
+            <div class="slide" onclick="showContent(2)">
+              <h5>Who is it for</h5>
+            </div>
+            <div class="slide" onclick="showContent(3)">
+              <h5>Directions</h5>
+            </div>
+          </div>
+
+          <div id="content-1" class="content active">
+            <p>
+              Water (Aqua), Sodium Laureth Sulfate, Cocamidopropyl Betaine,
+              PPG-2 Hydroxyethyl Coco/Isostearamidee, Aloe Barbadensis Leaf
+              Juice, Lauryl Glucoside, Aesculus Hippocastanum (Horse Chestnut)
+              Extract, PEG-40 Castor Oil, Glycerin, Rosmarinus Officinalis
+              (Rosemary) Leaf Extract, Tasmannia Lanceolata Leaf Extract,
+              Zingiber Officinale (Ginger) Root Extract, Phospholipids, Retinyl
+              Palmitate (Vitamin A Palmitate), Ascorbyl Palmitate (Vitamin C
+              Palmitate), Tocopheryl Acetate (Vitamin E Acetate), PEG-8
+              Dimethicone, Polysorbate-20, PEG-8 Ricinoleate, Caprylyl Glycol,
+              Fragrance (Parfum), Phenoxyethanol, Panthenol, PEG-12 Dimethicone,
+              Polyquaternium-10, Tetrasodium EDTA, Sorbic Acid, Citric Acid.
+            </p>
+          </div>
+
+          <div id="content-2" class="content">
+            <p>
+              Water (Aqua), Sodium Laureth Sulfate, Cocamidopropyl Betaine,
+              PPG-2 Hydroxyethyl Coco/Isostearamidee, Aloe Barbadensis Leaf
+              Juice, Lauryl Glucoside, Aesculus Hippocastanum (Horse Chestnut)
+              Extract, PEG-40 Castor Oil, Glycerin, Rosmarinus Officinalis
+              (Rosemary) Leaf Extract, Tasmannia Lanceolata Leaf Extract,
+              Zingiber Officinale (Ginger) Root Extract, Phospholipids, Retinyl
+              Palmitate (Vitamin A Palmitate), Ascorbyl Palmitate (Vitamin C
+              Palmitate)
+            </p>
+          </div>
+          <div id="content-3" class="content">
+            <p>
+              Water (Aqua), Sodium Laureth Sulfate, Cocamidopropyl Betaine,
+              PPG-2 Hydroxyethyl Coco/Isostearamidee, Aloe Barbadensis Leaf
+              Juice, Lauryl Glucoside, Aesculus Hippocastanum (Horse Chestnut)
+              Extract, PEG-40 Castor Oil, Glycerin, Rosmarinus Officinalis
+              (Rosemary) Leaf Extract, Tasmannia Lanceolata Leaf Extract,
+              Zingiber Officinale (Ginger) Root Extract, Phospholipids, Retinyl
+              Palmitate (Vitamin A Palmitate), Ascorbyl Palmitate (Vitamin C
+              Palmitate), Tocopheryl Acetate (Vitamin E Acetate), PEG-8
+              Dimethicone, Polysorbate-20, PEG-8 Ricinoleate, Caprylyl Glycol,
+              Fragrance (Parfum), Phenoxyethanol, Panthenol, PEG-12 Dimethicone,
+              Polyquaternium-10, Tetrasodium EDTA, Sorbic Acid, Citric Acid.
+              This is the paragraph for Slide 2. It will be displayed when Slide
+              2 is clicked.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section></section>
+
+    <section style="height: 100vh"></section>
+    <script src="./scripts.js"></script>
+  </body>
+</html>

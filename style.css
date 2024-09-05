@@ -1,0 +1,414 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+}
+
+body {
+  background-color: #fbf6e2;
+  font-family: "Manrope", sans-serif;
+}
+
+section {
+  width: 90%;
+  margin: auto;
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+  margin-top: 5rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1.5rem;
+  @media (max-width: 920px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: #131842;
+}
+
+a:hover {
+  opacity: 0.9;
+}
+
+.kiri {
+  display: flex;
+  gap: 5px;
+  @media (max-width: 768px) {
+    width: 100wh;
+    display: flex;
+  }
+}
+
+.kanan {
+  color: #131842;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.kanan h1 {
+  font-size: 1.7rem;
+  line-height: 1.3;
+  max-width: 25ch;
+  color: #131842;
+}
+
+h3 {
+  font-size: 1rem;
+  color: #131842;
+}
+
+h5 {
+  font-size: 1rem;
+  color: #131842;
+}
+
+p {
+  font-size: 0.75rem;
+  color: #131842;
+}
+
+/*Slider*/
+.slider-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 100%;
+}
+
+.main-image {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.main-image img {
+  display: block;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+.thumbnail-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  overflow: hidden; /* Menghilangkan elemen yang melampaui batas kontainer */
+}
+
+.thumbnails {
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px;
+  overflow-x: auto; /* Penggulung horizontal */
+  scroll-behavior: smooth;
+  padding-bottom: 10px; /* Menambah padding agar gambar tidak terpotong */
+  width: 450px; /* Batas lebar kontainer thumbnail */
+  @media (max-width: 920px) {
+    width: 330px;
+  }
+  @media (max-width: 369px) {
+    width: 280px;
+  }
+}
+
+.thumbnails::-webkit-scrollbar {
+  display: none; /* Menghilangkan scrollbar bawaan browser */
+}
+
+.thumbnails img {
+  display: block;
+  flex-shrink: 0; /* Mencegah gambar mengecil saat overflow */
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.thumbnails img:hover {
+  transform: scale(1.1);
+}
+
+/* Check Mark */
+.check-mark-container {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+p b i {
+  color: #dc2626;
+}
+
+.check-mark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 17px;
+  height: 17px;
+  overflow: hidden;
+}
+.check-mark img {
+  max-width: 100%;
+  max-height: 100%;
+  height: auto;
+  width: auto;
+  object-fit: cover;
+}
+.deskripsi {
+  margin: 10px 0;
+  p {
+    font-size: 1rem;
+  }
+}
+
+.price p {
+  font-size: 1.2rem;
+}
+
+/*TOMBOL*/
+.btn-container {
+  display: flex;
+  gap: 10px;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: inherit;
+}
+
+/*Tombol*/
+.quantity-container {
+  display: flex;
+  align-items: center;
+}
+
+.btn-color {
+  padding: 0.1rem;
+  background-color: #fbf6e2;
+  border: 2px solid #131842;
+}
+
+.qty-btn {
+  width: 30px;
+  height: 30px;
+  border: none;
+  font-size: 20px;
+  text-align: center;
+  cursor: pointer;
+  color: #131842;
+}
+
+#quantity {
+  background-color: #fbf6e2;
+  width: 30px;
+  text-align: center;
+  height: 30px;
+  font-size: inherit;
+  border: none;
+  -moz-appearance: textfield; /* Firefox */
+  -webkit-appearance: none; /* Chrome, Safari, Edge */
+  appearance: none;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.btn-2 {
+  padding: 10px 20px;
+  color: #fbf6e2;
+  background: #131842;
+}
+
+.btn-2:hover {
+  opacity: 0.8;
+}
+
+.btn-3 {
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom: 10px;
+  display: inline-block;
+  padding: 10px 20px;
+  text-align: center;
+  color: #131842;
+  border: 2px solid #131842;
+  @media (max-width: 425px) {
+    padding: 5px 10px;
+  }
+}
+.btn-3:hover {
+  color: #fbf6e2;
+  background: #131842;
+}
+
+/*COMPAIR*/
+.compair-container {
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+label h3 {
+  text-align: center;
+  align-items: center;
+  max-width: 10ch;
+}
+
+.compair-container h3 {
+  font-size: 1.2rem;
+}
+.compair {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.btn-width {
+  max-width: 25ch;
+}
+
+#plus-icon {
+  font-size: 24px;
+  text-align: center;
+  margin: 0 20px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.product-section {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  @media (max-width: 425px) {
+    gap: 10px;
+  }
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  column-gap: 10px;
+  background-color: #131842;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+}
+.image-price {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 0 0 4px;
+}
+.product-image {
+  width: 146px;
+  height: 146px;
+  object-fit: cover;
+  @media (max-width: 425px) {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+.product-name {
+  display: none; /* Sembunyikan label produk */
+}
+
+.price {
+  font-weight: bold;
+  color: #fbf6e2;
+}
+
+.selected-products {
+  margin-top: 20px;
+}
+
+ul#selected-products-list {
+  padding: 0;
+  margin: 0;
+}
+
+ul#selected-products-list li {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+/* Image SLIDER */
+.thumbnail {
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.1s ease;
+}
+.thumbnail:hover {
+  opacity: 1;
+}
+
+/* Paragraf SLIDER */
+.slider {
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 1px solid #fee2e2;
+  width: 100%;
+  margin-bottom: 5px;
+}
+.slide {
+  cursor: pointer;
+  position: relative;
+  color: #fafaf9;
+}
+
+.slide.active {
+  color: #131842;
+}
+.slide::after {
+  content: "";
+  display: block;
+  height: 2px;
+  background-color: #fafaf9;
+  margin-top: 5px;
+  transition: height 0.3s ease, background-color 0.3s ease;
+  font-weight: bold;
+}
+.slide.active::after {
+  height: 2px;
+  background-color: #131842;
+  width: 50px;
+}
+.content {
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+  transition: opacity 0.3s ease, height 0.3s ease;
+}
+.content.active {
+  opacity: 1;
+  height: auto;
+  overflow: visible;
+}
